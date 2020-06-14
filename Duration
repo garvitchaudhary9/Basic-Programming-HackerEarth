@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int N=0;
+	cin>>N;
+	int SH[1000]={0};
+	int SM[1000]={0};
+	int EH[1000]={0};
+	int EM[1000]={0};
+	int mins[1000]={0};
+	int hours[1000]={0};
+	for(int i=0;i<N;i++){
+		cin>>SH[i]>>SM[i]>>EH[i]>>EM[i];
+	}
+	for(int i=0;i<N;i++)
+	{if(EM[i]<SM[i]){
+		mins[i]=EM[i]+60-SM[i];
+		hours[i]=EH[i]-SH[i]-1;
+		cout<<hours[i]<<" " <<mins[i]<<endl;
+	}
+	else{
+		mins[i]=EM[i]-SM[i];
+		hours[i]=EH[i]-SH[i];
+		cout<<hours[i]<<" " <<mins[i]<<endl;
+	}
+	}
+	return 0;
+}

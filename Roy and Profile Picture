@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int L=0;
+	int N=0;
+	cin>>L;
+	cin>>N;
+	int W[N]={0};
+	int H[N]={0};
+	for(int i=0;i<N;i++){
+		cin>>W[i]>>H[i];
+		if(W[i]>=L&&H[i]>=L){
+			if(W[i]==H[i]){
+			cout<<"ACCEPTED"<<endl;}
+			else{
+			cout<<"CROP IT"<<endl;
+		}}
+		if(W[i]<L||H[i]<L){
+			cout<<"UPLOAD ANOTHER"<<endl;
+		}
+		
+	}
+
+	return 0;
+}
